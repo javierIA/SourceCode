@@ -3,7 +3,7 @@ import numpy  as np #for mathematical calculations
 import cv2 #for image processing
 
 
-cap=cv2.VideoCapture("video.mp4") #for capturing the video
+cap=cv2.VideoCapture(1) #for capturing the video
 #if send the path of the video file instead of 0 then it will play the video file
 #0 is for the default camera 
 filter=0 #for selecting the filter

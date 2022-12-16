@@ -1,9 +1,8 @@
 #Importing the libraries
 import numpy  as np #for mathematical calculations
 import cv2 #for image processing
-import pytesseract
 
-cap=cv2.VideoCapture(0) #for capturing the video
+cap=cv2.VideoCapture(1) #for capturing the video
 #if send the path of the video file instead of 0 then it will play the video file
 #0 is for the default camera 
 while cap.isOpened():
@@ -13,8 +12,8 @@ while cap.isOpened():
     # show the frame raw and black and white
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-    text = pytesseract.image_to_string(gray)
-    print(text)
+    #text = pytesseract.image_to_string(gray)
+    #print(text)
     cv2.imshow("frame",frame) 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
